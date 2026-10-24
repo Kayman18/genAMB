@@ -1,6 +1,8 @@
 # genAMB FM-1 — 1.0 RC2
 
-Custom firmware for the FM-1. RC2 replaces the earlier independent Hallucigenia/Evolve implementation with a port of the upstream Hallucigenia sequencing core for **both Rings and FM**.
+Custom firmware for the FM-1. 
+
+It will start in PIANO mode, only the Pad synths will run. Turn the Algorithm knob to place it in scale mode and have the sequencers trigger notes.
 
 ## Downloads
 
@@ -11,18 +13,6 @@ Custom firmware for the FM-1. RC2 replaces the earlier independent Hallucigenia/
 - [SHA-256 checksums](SHA256SUMS)
 
 Extract the source ZIP before building. It includes the application, platform code, vendored DSP sources, original upstream Hallucigenia source, tests, and license notices. The compiler, SDK resources and fonts are external to this archive; see the build instructions.
-
-## Hallucigenia in RC2
-
-The port preserves upstream randomization, all-16-step mutation, advance-before-output clock behavior and sample-and-hold ordering. Original, Proteus and UNIT-D remain selectable.
-
-FM-1 adaptations retain the system clock, all 13 rate settings, scale/chord following, octave controls, humanization, Burst and existing pattern storage. End-of-pattern triggers mutation automatically. Existing RC1 pattern banks remain loadable; saved pitches retain their 7-bit encoding.
-
-**After reset, the first clock plays the second visible step**, matching upstream. This is a sequencing-core port, with the existing FM-1 interface. See [upstream and adaptation details](docs/Hallucigenia-Upstream.md).
-
-Display version: `1.0 RC2`. USB manufacturer/product: `genAMB` / `genAMB FM-1`. Numeric updater identity: `FM-1_7179913` (internal release `17.99.13`).
-
-The build passed 10,000 comparisons against the upstream module core, production integration and regression tests, and package integrity checks. See the release notes for test scope, resource use and remaining limitations.
 
 ## Attribution and licensing
 
