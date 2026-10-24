@@ -4,13 +4,13 @@ Custom firmware for the FM-1.
 
 It will start in PIANO mode, only the Pad synths will run. Turn the Algorithm knob to place it in scale mode and have the sequencers trigger notes.
 
-2 Pad Synths (Both have different Characters Pad 1 - Vintage and Rhodes. Pad 2 - Strings and Glass. Pad 1 has a Chorus Effect, Pad 2 has a Stereo Width setting (cpu maxing out)
-Rings port - Modes Kept - Modal, Sympathetic stings, and Strings the rest had to go for space and memory
-6 Voice FM synth, with 16 Presets - Koto, Harp, Brt Harp, Drop, Mallet, Bell, Rin, Bamboo, Furin, Marimba, Celeste, Kalimba, Xylophone, Glockenspiel, Warm Bass, Reso Bass.
-3 Ported Sequencers from VCVrack: Hallucigenia, Proteus, UNIT-D
-Burst Setting, to simulate Chords strums
-Delay on Rings (too costly to add everywhere, may try to add it to FM later)
-Global 4 Channel Mixer
+*  2 Pad Synths (Both have different Characters Pad 1 - Vintage and Rhodes. Pad 2 - Strings and Glass. Pad 1 has a Chorus Effect, Pad 2 has a Stereo Width setting (cpu maxing out)
+*  Rings port - Modes Kept - Modal, Sympathetic stings, and Strings the rest had to go for space and memory
+*  6Voice FM synth, with 16 Presets - Koto, Harp, Brt Harp, Drop, Mallet, Bell, Rin, Bamboo, Furin, Marimba, Celeste, Kalimba, Xylophone, Glockenspiel, Warm Bass, Reso Bass.
+*  3 Ported Sequencers from VCVrack: Hallucigenia, Proteus, UNIT-D
+*  Burst Setting, to simulate Chords strums
+*  Delay on Rings (too costly to add everywhere, may try to add it to FM later)
+*  Global 4 Channel Mixer
 
 
 
