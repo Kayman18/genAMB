@@ -16,11 +16,11 @@ It will start in PIANO mode, only the Pad synths will run. Turn the Algorithm kn
 
 ## Downloads
 
-- [Precompiled RC2 firmware](firmware/genAMB-1.0-RC2-Hallucigenia-Port.fwsc?raw=true)
-- [Complete RC2 source archive](source/genAMB-1.0-RC2-Complete-Source.zip?raw=true)
-- [Release notes and validation summary](docs/Release-Notes-1.0-RC2.md)
-- [Build instructions](docs/BUILDING-1.0-RC2.md)
-- [SHA-256 checksums](SHA256SUMS)
+- [Precompiled RC2 firmware](https://raw.githubusercontent.com/Kayman18/genAMB/main/firmware/genAMB-1.0-RC2-Hallucigenia-Port.fwsc)
+- [Complete RC2 source archive](https://raw.githubusercontent.com/Kayman18/genAMB/main/source/genAMB-1.0-RC2-Complete-Source.zip)
+- [Release notes and validation summary](https://github.com/Kayman18/genAMB/blob/main/docs/Release-Notes-1.0-RC2.md)
+- [Build instructions](https://github.com/Kayman18/genAMB/blob/main/docs/BUILDING-1.0-RC2.md)
+- [SHA-256 checksums](https://github.com/Kayman18/genAMB/blob/main/SHA256SUMS)
 
 Extract the source ZIP before building. It includes the application, platform code, vendored DSP sources, original upstream Hallucigenia source, tests, and license notices. The compiler, SDK resources and fonts are external to this archive; see the build instructions.
 
@@ -35,4 +35,4 @@ Built on Charles Vestal's [fm1-amb](https://github.com/charlesvestal/fm1-amb) an
 - **Proteus** — adapted from [Seaside Modular Proteus](https://github.com/abluenautilus/SeasideModularVCV/blob/master/src/Proteus.cpp), by Seaside Modular contributors (MIT).
 - **UNIT-D / UnitDistanceSeq** — adapted from [Animatek's UNIT-D](https://github.com/animatek/UZZ-VCV-RACK/blob/main/src/UnitDistanceSeq.cpp); the adaptation is GPL-3.0-or-later.
 
-Original copyright and component license notices are retained in the complete source archive. See [LICENSING.md](LICENSING.md) for component provenance and combined-firmware licensing.
+Original copyright and component license notices are retained in the complete source archive. See [LICENSING.md](https://github.com/Kayman18/genAMB/blob/main/LICENSING.md) for component provenance and combined-firmware licensing.
