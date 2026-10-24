@@ -1,18 +1,5 @@
 # genAMB FM-1 — 1.0 RC1
 
-Built from v17.99.11 with all approved pending UI and branding changes.
-
-## Changes
-
-- Garden page 1: 2×2 Tempo, Evolve, Motion and Drift controls.
-- Garden page 2, Root & Note Div: Root, FM Density, Rings Density and an empty fourth box. Press HOME to switch between Garden pages. The controls edit the existing parameters; the original FM/Rings density controls are removed. Sequencer-specific algorithm density parameters remain separate.
-- GLO Setup: 2×2 Tune, MIDI out, Lights and an empty fourth box.
-- Shared panel typography enlarged with measured fitting. Two-word values such as Smooth Rnd use two lines where they fit; captions and knob indicators retain separate space. Active panel borders remain, with bottom underlines removed where they could touch two-line values.
-- USB manufacturer: genAMB. USB product: genAMB FM-1.
-- Displayed version: 1.0 RC1. Numeric updater identity: FM-1_7179912 (internal release 17.99.12).
-
-All v17.99.11 layouts and fractional Rate settings are retained. No audio DSP, parameter IDs or saved-project format changed. Project format remains 22. FM maximum remains six voices, default four. FM filter remains on CPU1. The previously reported high-octave FM loudness issue is unresolved; this UI/branding release does not change its sound.
-
 ## Validation
 
 - Production host tests passed for 18 wide pages, all physical knob bindings in both prior row states, new Root/Note controls, exclusive placement of FM/Rings density controls, and M1–M6 fixed routing/shape with adjustable depth/speed.
