@@ -1,31 +1,38 @@
-# genAMB FM-1
+# genAMB FM-1 — 1.0 RC2
 
-Custom FM-1 firmware. Current version: **1.0 RC1**.
+Custom firmware for the FM-1. RC2 replaces the earlier independent Hallucigenia/Evolve implementation with a port of the upstream Hallucigenia sequencing core for **both Rings and FM**.
 
 ## Downloads
 
-- [Precompiled firmware](firmware/genAMB-1.0-RC1.fwsc?raw=true)
-- [Complete source archive](source/genAMB-1.0-RC1-Complete-Source.zip?raw=true)
-- [Release notes and validation summary](docs/Release-Notes-1.0-RC1.md)
-- [Build instructions](docs/BUILDING-1.0-RC1.md)
-- [Checksums](SHA256SUMS)
+- [Precompiled RC2 firmware](firmware/genAMB-1.0-RC2-Hallucigenia-Port.fwsc?raw=true)
+- [Complete RC2 source archive](source/genAMB-1.0-RC2-Complete-Source.zip?raw=true)
+- [Release notes and validation summary](docs/Release-Notes-1.0-RC2.md)
+- [Build instructions](docs/BUILDING-1.0-RC2.md)
+- [SHA-256 checksums](SHA256SUMS)
 
-The source ZIP includes application code, fm1-base, vendored DSP code, tests, and their license notices. Extract it before building. The compiler, SDK resources, and fonts are external to this source archive; see the build instructions.
+Extract the source ZIP before building. It includes the application, platform code, vendored DSP sources, original upstream Hallucigenia source, tests, and license notices. The compiler, SDK resources and fonts are external to this archive; see the build instructions.
 
-## RC1
+## Hallucigenia in RC2
 
-Includes the Garden and Root & Note Div pages, 2×2 Setup controls, larger panel text with two-line values, and genAMB USB branding. Displayed version: `1.0 RC1`. Updater identity: `FM-1_7179912` (internal release `17.99.12`).
+The port preserves upstream randomization, all-16-step mutation, advance-before-output clock behavior and sample-and-hold ordering. Original, Proteus and UNIT-D remain selectable.
 
-Build and automated validation passed.
+FM-1 adaptations retain the system clock, all 13 rate settings, scale/chord following, octave controls, humanization, Burst and existing pattern storage. End-of-pattern triggers mutation automatically. Existing RC1 pattern banks remain loadable; saved pitches retain their 7-bit encoding.
+
+**After reset, the first clock plays the second visible step**, matching upstream. This is a sequencing-core port, with the existing FM-1 interface. See [upstream and adaptation details](docs/Hallucigenia-Upstream.md).
+
+Display version: `1.0 RC2`. USB manufacturer/product: `genAMB` / `genAMB FM-1`. Numeric updater identity: `FM-1_7179913` (internal release `17.99.13`).
+
+The build passed 10,000 comparisons against the upstream module core, production integration and regression tests, and package integrity checks. See the release notes for test scope, resource use and remaining limitations.
+
 ## Attribution and licensing
 
-Built on Charles Vestal's [fm1-amb](https://github.com/charlesvestal/fm1-amb) and fm1-base, with third-party components including Mutable Instruments Rings/stmlib. See [licensing notes](LICENSING.md) and the individual source/vendor notices in the complete source archive.
+Built on Charles Vestal's [fm1-amb](https://github.com/charlesvestal/fm1-amb) and [fm1-base](https://github.com/charlesvestal/fm1-base), with [felucca-bsp](https://github.com/hugelton/felucca-bsp) by Leo Kuroshita / Hügelton Instruments. Synthesis components include Mutable Instruments Rings/stmlib by Emilie Gillet and the [Zen-1](https://github.com/aceyprime/zen-1) six-operator FM engine and its msfa-derived core.
 
 ### Sequencers
 
-- **Original** — the original AMB-1 generative sequencing by [Charles Vestal](https://github.com/charlesvestal/fm1-amb), retained and extended for genAMB (MPL-2.0).
-- **Hallucigenia (formerly Evolve)** — genAMB's independent generative sequencer implementation, inspired by the [Extratone Darwinism](https://library.vcvrack.com/Extratone/Darwinism) concept. It is not a direct port of Darwinism; the implementation in `app/dsp/evolve.c` is MPL-2.0.
-- **Proteus** — adapted from [Seaside Modular Proteus](https://github.com/abluenautilus/SeasideModularVCV/blob/master/src/Proteus.cpp), by Seaside Modular contributors (MIT). The FM-1 adaptation uses fixed-size state and follows the active chord.
-- **UNIT-D / UnitDistanceSeq** — adapted from [Animatek's UNIT-D](https://github.com/animatek/UZZ-VCV-RACK/blob/main/src/UnitDistanceSeq.cpp). The genAMB adaptation is GPL-3.0-or-later, with upstream attribution and license text retained in `app/vendor/unitd/`.
+- **Original** — original AMB-1 generative sequencing by [Charles Vestal](https://github.com/charlesvestal/fm1-amb), retained and extended for genAMB (MPL-2.0 provenance).
+- **Hallucigenia / Darwinism** — ported from [Eater of Sheep's Extratone / XTRTN source](https://github.com/EaterOfSheep/Extratone/blob/main/src/Darwinism.cpp), GPL-3.0-or-later. RC2 replaces the independent Evolve implementation with this upstream-derived core.
+- **Proteus** — adapted from [Seaside Modular Proteus](https://github.com/abluenautilus/SeasideModularVCV/blob/master/src/Proteus.cpp), by Seaside Modular contributors (MIT).
+- **UNIT-D / UnitDistanceSeq** — adapted from [Animatek's UNIT-D](https://github.com/animatek/UZZ-VCV-RACK/blob/main/src/UnitDistanceSeq.cpp); the adaptation is GPL-3.0-or-later.
 
-These are hardware-specific implementations/adaptations. Original component copyright and license notices remain in the complete source archive; see [LICENSING.md](LICENSING.md) for the combined firmware's licensing details.
+Original copyright and component license notices are retained in the complete source archive. See [LICENSING.md](LICENSING.md) for component provenance and combined-firmware licensing.

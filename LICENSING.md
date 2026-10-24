@@ -93,3 +93,13 @@ not copied proprietary code, measured hardware emulations, endorsement or
 affiliation. The combined firmware retains the component-license obligations
 described above. No third-party code or new font binaries were imported for
 this filter replacement.
+
+## genAMB 1.0 RC2: upstream Hallucigenia / Darwinism port
+
+The previous independent Evolve implementation is replaced for both Rings and
+FM by an adaptation of Eater of Sheep / Extratone's Hallucigenia source:
+https://github.com/EaterOfSheep/Extratone/blob/main/src/Darwinism.cpp .
+The core and integration are GPL-3.0-or-later; original upstream source,
+license and precise adaptation notes are in `app/vendor/hallucigenia/`.
+See `UPSTREAM.md` there for the pinned source blob and hardware differences.
+Existing Original sequencing portions retain their MPL-2.0 provenance.
